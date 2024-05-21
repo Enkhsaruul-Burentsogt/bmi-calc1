@@ -1,0 +1,25 @@
+clde
+1. コンフリクトを引き起こすための新しいブランチを作成し、ブランチを切替えます。
+git switch -C feature-branch
+
+2. feature-branchで conflict-file.txt を作成し、保存します。
+> featureで描いたよ
+
+3. add, commit, pushします。
+git add .
+git commit -m “コンフリクト練習”
+git push origin feature-branch
+
+4. メインブランチ（mainまたはmaster）に戻ります。
+git switch main
+
+5. メインブランチで conflict-file.txt を作成し、保存します。
+> mainで描いたよ
+
+6. add, commit, pushします。
+
+git add .
+git commit -m “mainで編集"
+git push origin main
+
+7. メインブランチに feature-branch をプルリクするとコンフリクトが発生するはずです。
